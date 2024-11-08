@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CulinaryBlog_milukovakatya</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/shared.css" />
+    <link rel="stylesheet" href="~/css/login_and_registration.css" />
+</head>
+<body>
+  <div id ="header-top">
+      <div class=" logo">Кулинарный блог</div>
+      <div class="button-header">
+          <button class="button">Вход</button>
+          <button class="button">Регистрация</button>
+      </div>
+  </div>
+
+    <img class="img-header" src="~/images/top-view-table-full-food_23-2149209253.png"/>
+
+    <div id= "header-bottom">
+        <div class="menu">
+            <ul>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#recipes">Рецепты</a></li>
+                <li><a href="#blog">Блог</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+            @RenderBody()
+    </div>
+    <script src="~/js/shared_script.js" asp-append-version="true"></script>
+    <script src="~/js/home_script.js" asp-append-version="true"></script>
+    @await Html.PartialAsync("_LoginRegistrationPartial")
+</body>
+</html>
